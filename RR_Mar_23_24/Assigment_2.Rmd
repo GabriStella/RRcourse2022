@@ -63,3 +63,11 @@ ggplot(views, aes(x=as.factor(season), y = viewers)) +
        y="viewers (mln)",
        title= "viewers of each HIMYM's season")
 ```
+```{r}
+variations <- data.frame(season = 1:9,
+                    changes= c(0, -5.6, -8.2, 14.8, -8.7, 2.2, 10, -6.7, 16.5) )
+ggplot(variations, aes(x = season, y = changes)) + 
+  geom_line() +
+  geom_point()+
+  labs(x= "season", y= "changes (percentage)", title = "changes in viewerships")
+```
