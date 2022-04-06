@@ -1,0 +1,91 @@
+---
+title: "Assigment 2"
+author: "Gabriele Stella"
+date: "6/04/2022"
+output: html_document
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+`fig.align= 'center', echo= FALSE`<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/How_i_met_your_mother_logo.svg/440px-How_i_met_your_mother_logo.svg.png" width="460" height="300"/>
+
+**How I Met Your Mother** (often abbreviated as **HIMYM**) is an
+American sitcom, created by *Craig Thomas* and *Carter Bays* for CBS.
+The series, which aired from 2005 to 2014, follows the main character,
+*Ted Mosby*, and his group of friends in New York City's Manhattan. As a
+framing device, *Ted*, in the year 2030, recounts to his son, *Luke*,
+and daughter, *Penny*, the events from September 2005 to May 2013 that
+led him to meet their mother. How I Met Your Mother is a joint
+production by Bays & Thomas Productions and 20th Television and
+syndicated by 20th Television (now Disney-ABC Domestic Television).
+
+------------------------------------------------------------------------
+
+### basic statistics about seasons
+
+| Season |    Period     | Viewers (mln) | Rating |
+|:------:|:-------------:|:-------------:|:------:|
+|   1    | 09/05 - 05/06 |     9.47      |  3.2   |
+|   2    | 09/06 - 05/07 |     8.94      |  4.67  |
+|   3    | 09/07 - 05/08 |     8.21      |  4.5   |
+|   4    | 09/08 - 05/09 |     9.42      |  4.8   |
+|   5    | 09/09 - 05/10 |     8.60      |  4.6   |
+|   6    | 09/10 - 05/11 |     8.79      |  3.9   |
+|   7    | 09/11 - 05/12 |     9.67      |  4.3   |
+|   8    | 09/12 - 05/13 |     9.02      |  4.1   |
+|   9    | 09/13 - 03/14 |     10.51     |  3.7   |
+
+#### note
+
+-   *fourth* season was related as the best by fans, although the
+    *ninth* had the most *viewers*
+
+-   each *season* took about *eight month* to be shot
+
+------------------------------------------------------------------------
+
+## graphics
+
+```{r, include=FALSE}
+library(ggplot2)
+```
+
+```{r fig.align='center', echo=FALSE}
+views <- data.frame(season = 1:9,
+                    viewers= c(9.47, 8.94, 8.21, 9.42, 8.60, 8.79, 9.67, 9.02, 10.51 ))
+ggplot(views, aes(x=as.factor(season), y = viewers)) + 
+  geom_col(position = "dodge",
+           fill= "goldenrod3") +
+  geom_text(aes(label= viewers),
+            position = position_dodge(width = 0.9)) + 
+  labs(x="season",
+       y="viewers (mln)",
+       title= "viewers of each HIMYM's season")
+```
+
+```{r fig.align='center', echo=FALSE}
+variations <- data.frame(season = 1:9,
+                    changes= c(0, -5.6, -8.2, 14.8, -8.7, 2.2, 10, -6.7, 16.5) )
+ggplot(variations, aes(x = season, y = changes)) + 
+  geom_line() +
+  geom_point()+
+  labs(x= "season", y= "changes (percentage)", title = "changes in viewerships")
+```
+
+------------------------------------------------------------------------
+
+#### conclusion
+
+as we can see there are no evidence of a trend during the time.
+
+##### anyway we can note that:
+
+-   the season with more viewers is the season
+    `r views[views$viewers == max(views$viewers),]$season` with
+    `r max(views$viewers)` milion viewers.
+-   the least watched season was season
+    `r views[views$viewers == min(views$viewers),]$season` with
+    `r min(views$viewers)` milion viewers;
+-   the more and the least watched season has a different of exactly
+    `r max(views$viewers) - min(views$viewers)` milion viewers
