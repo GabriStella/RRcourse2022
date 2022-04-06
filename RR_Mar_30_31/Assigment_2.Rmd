@@ -8,7 +8,7 @@ editor_options:
     wrap: 72
 ---
 
-`fig.align= 'center', echo= FALSE`<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/How_i_met_your_mother_logo.svg/440px-How_i_met_your_mother_logo.svg.png" width="460" height="300"/>
+`fig.align= 'center'`<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/How_i_met_your_mother_logo.svg/440px-How_i_met_your_mother_logo.svg.png" width="460" height="300"/>
 
 **How I Met Your Mother** (often abbreviated as **HIMYM**) is an
 American sitcom, created by *Craig Thomas* and *Carter Bays* for CBS.
