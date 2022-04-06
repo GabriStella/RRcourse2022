@@ -42,3 +42,24 @@ syndicated by 20th Television (now Disney-ABC Domestic Television).
     *ninth* had the most *viewers*
 
 -   each *season* took about *eight month* to be shot
+
+------------------------------------------------------------------------
+
+## graphics
+
+```{r, include=FALSE}
+library(ggplot2)
+```
+
+```{r fig.align='center', echo=FALSE}
+views <- data.frame(season = 1:9,
+                    viewers= c(9.47, 8.94, 8.21, 9.42, 8.60, 8.79, 9.67, 9.02, 10.51 ))
+ggplot(views, aes(x=as.factor(season), y = viewers)) + 
+  geom_col(position = "dodge",
+           fill= "goldenrod3") +
+  geom_text(aes(label= viewers),
+            position = position_dodge(width = 0.9)) + 
+  labs(x="season",
+       y="viewers (mln)",
+       title= "viewers of each HIMYM's season")
+```
