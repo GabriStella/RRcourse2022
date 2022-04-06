@@ -8,7 +8,7 @@ editor_options:
     wrap: 72
 ---
 
-# how i met your mother
+`fig.align= 'center'`<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/How_i_met_your_mother_logo.svg/440px-How_i_met_your_mother_logo.svg.png" width="460" height="300"/>
 
 **How I Met Your Mother** (often abbreviated as **HIMYM**) is an
 American sitcom, created by *Craig Thomas* and *Carter Bays* for CBS.
@@ -19,4 +19,3 @@ and daughter, *Penny*, the events from September 2005 to May 2013 that
 led him to meet their mother. How I Met Your Mother is a joint
 production by Bays & Thomas Productions and 20th Television and
 syndicated by 20th Television (now Disney-ABC Domestic Television).
-
