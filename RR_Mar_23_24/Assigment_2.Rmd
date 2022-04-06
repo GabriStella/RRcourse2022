@@ -19,3 +19,26 @@ and daughter, *Penny*, the events from September 2005 to May 2013 that
 led him to meet their mother. How I Met Your Mother is a joint
 production by Bays & Thomas Productions and 20th Television and
 syndicated by 20th Television (now Disney-ABC Domestic Television).
+
+------------------------------------------------------------------------
+
+### basic statistics about seasons
+
+| Season |    Period     | Viewers (mln) | Rating |
+|:------:|:-------------:|:-------------:|:------:|
+|   1    | 09/05 - 05/06 |     9.47      |  3.2   |
+|   2    | 09/06 - 05/07 |     8.94      |  4.67  |
+|   3    | 09/07 - 05/08 |     8.21      |  4.5   |
+|   4    | 09/08 - 05/09 |     9.42      |  4.8   |
+|   5    | 09/09 - 05/10 |     8.60      |  4.6   |
+|   6    | 09/10 - 05/11 |     8.79      |  3.9   |
+|   7    | 09/11 - 05/12 |     9.67      |  4.3   |
+|   8    | 09/12 - 05/13 |     9.02      |  4.1   |
+|   9    | 09/13 - 03/14 |     10.51     |  3.7   |
+
+#### note
+
+-   *fourth* season was related as the best by fans, although the
+    *ninth* had the most *viewers*
+
+-   each *season* took about *eight month* to be shot
