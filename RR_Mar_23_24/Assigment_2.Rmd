@@ -63,6 +63,7 @@ ggplot(views, aes(x=as.factor(season), y = viewers)) +
        y="viewers (mln)",
        title= "viewers of each HIMYM's season")
 ```
+
 ```{r}
 variations <- data.frame(season = 1:9,
                     changes= c(0, -5.6, -8.2, 14.8, -8.7, 2.2, 10, -6.7, 16.5) )
@@ -71,3 +72,20 @@ ggplot(variations, aes(x = season, y = changes)) +
   geom_point()+
   labs(x= "season", y= "changes (percentage)", title = "changes in viewerships")
 ```
+
+------------------------------------------------------------------------
+
+#### conclusion
+
+as we can see there are no evidence of a trend during the time.
+
+##### anyway we can note that:
+
+-   the season with more viewers is the season
+    `r views[views$viewers == max(views$viewers),]$season` with
+    `r max(views$viewers)` milion viewers.
+-   the least watched season was season
+    `r views[views$viewers == min(views$viewers),]$season` with
+    `r min(views$viewers)` milion viewers;
+-   the more and the least watched season has a different of exactly
+    `r max(views$viewers) - min(views$viewers)` milion viewers
