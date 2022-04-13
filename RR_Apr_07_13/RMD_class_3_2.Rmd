@@ -3,7 +3,7 @@ title: "(R)Markdown #3"
 author: "Wojciech Hardy; Łukasz Nawaro"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: 
-  pdf_document:
+  html_document:
     citation_package: natbib
     toc: true
     number_sections: true
