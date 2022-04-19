@@ -3,9 +3,22 @@ title: "(R)Markdown"
 author: "Wojciech Hardy; Łukasz Nawaro"
 date: "3/23/2022"
 output: html_document
+params: 
+  year: 
+    label: "year of birth"
+    value: 2010
+    input: slider
+    min: 2010
+    max: 2018
+    step: 1
+    sep: ""
+  region: Europe 
+  printcode: true
+  data: file.csv
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE} 
+# all the information that you put here becames r default settings
 knitr::opts_chunk$set(echo = TRUE)
 library(reticulate)
 library(chron)

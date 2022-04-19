@@ -12,7 +12,7 @@ library(chron)
 #py_install("pandas")
 ```
 
----
+------------------------------------------------------------------------
 
 # Cheatsheets are handy as always
 
@@ -24,31 +24,30 @@ library(chron)
 
 [Or this one](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
 
----
+------------------------------------------------------------------------
 
 # Basic formatting
 
-Some basic text formatting includes `*Italics*` or `_Italics_` (*Italics*) and `**Bold**` or `__Bold__` (**Bold**) text. 
+Some basic text formatting includes `*Italics*` or `_Italics_` (*Italics*) and `**Bold**` or `__Bold__` (**Bold**) text.
 
-`Space between lines to break a paragraph
+\`Space between lines to break a paragraph
 
-Like so`
+Like so\`
 
 Space between lines to break a paragraph
 
 Like so
 
-`Or end a line with a double space to break  
-without starting a new paragraph`
+`Or end a line with a double space to break   without starting a new paragraph`
 
-Or end a line with a double space to break  
+Or end a line with a double space to break\
 without starting a new paragraph
 
 Superscripts can be done like so: `R^2^` R^2^
 
 Subscripts can be done like so: `H~2~O` H~2~O
 
----
+------------------------------------------------------------------------
 
 # Headers
 
@@ -72,7 +71,7 @@ Subscripts can be done like so: `H~2~O` H~2~O
 
 ##### Header 5
 
----
+------------------------------------------------------------------------
 
 # Lists
 
@@ -84,12 +83,11 @@ Subscripts can be done like so: `H~2~O` H~2~O
 
 `2. Item 3 # Note the error in numbering`
 
-1. Item 1
+1.  Item 1
 
-2. Item 2
+2.  Item 2
 
-2. Item 3 `# It's fine here though`
-
+3.  Item 3 `# It's fine here though`
 
 ## Unordered
 
@@ -97,27 +95,27 @@ Subscripts can be done like so: `H~2~O` H~2~O
 
 `* Another item`
 
-* Item
+-   Item
 
-* Another item
+-   Another item
 
 ## Subitems
 
-1. Item 1
-    + Item 2
-    - Item 3
+1.  Item 1
+    -   Item 2
+    -   Item 3
 
----
+------------------------------------------------------------------------
 
 # Tables
 
-| Day       | Hour  | Group  |
-|:------    |:-----:|-------:|
-| Wednesday | 9:45  | 1      |
-| Thursday  | 16:45 | 2      |
-| Thursday  | 18:30 | 3      |
+| Day       | Hour  | Group |
+|:----------|:-----:|------:|
+| Wednesday | 9:45  |     1 |
+| Thursday  | 16:45 |     2 |
+| Thursday  | 18:30 |     3 |
 
----
+------------------------------------------------------------------------
 
 # Quotes
 
@@ -127,19 +125,37 @@ Subscripts can be done like so: `H~2~O` H~2~O
 
 \- Geralt of Rivia
 
---- 
+------------------------------------------------------------------------
 
 # Using Html
 
 You can also just use html to write stuff within the markdown document. Here's something copied directly from YAML Wikipedia page source code:
 
-<table class="infobox" style="width:22em"><caption style="font-size:130%; padding-bottom:0.15em;">YAML</caption><tbody><tr><td colspan="2" style="text-align:center"><a href="/wiki/File:YAML_Logo.svg" class="image"><img alt="YAML Logo.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f8/YAML_Logo.svg/250px-YAML_Logo.svg.png" decoding="async" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f8/YAML_Logo.svg/375px-YAML_Logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f8/YAML_Logo.svg/500px-YAML_Logo.svg.png 2x" data-file-width="400" data-file-height="138" width="250" height="86"></a></td></tr><tr><th scope="row" style="line-height:1.2em; padding-right:0.65em;"><a href="/wiki/Filename_extension" title="Filename extension">Filename extensions</a></th><td style="line-height:1.35em;"><code class="mw-highlight mw-highlight-lang-text mw-content-ltr" id="" style="" dir="ltr">.yaml</code>, <code class="mw-highlight mw-highlight-lang-text mw-content-ltr" id="" style="" dir="ltr">.yml</code></td></tr><tr><th scope="row" style="line-height:1.2em; padding-right:0.65em;"><a href="/wiki/Media_type" title="Media type">Internet media&nbsp;type</a></th><td style="line-height:1.35em;"><i>Not registered</i></td></tr><tr><th scope="row" style="line-height:1.2em; padding-right:0.65em;">Initial release</th><td style="line-height:1.35em;">11&nbsp;May 2001<span class="noprint">; 19 years ago</span><span style="display:none">&nbsp;(<span class="bday dtstart published updated">2001-05-11</span>)</span></td></tr><tr><th scope="row" style="line-height:1.2em; padding-right:0.65em;"><a href="/wiki/Software_release_life_cycle" title="Software release life cycle">Latest release</a></th><td style="line-height:1.35em;"><div style="display:inline-block; padding:0.1em 0;line-height:1.2em;">1.2 (Third Edition)<br>(1&nbsp;October 2009<span class="noprint">; 11 years ago</span><span style="display:none">&nbsp;(<span class="bday dtstart published updated">2009-10-01</span>)</span>) </div></td></tr><tr><th scope="row" style="line-height:1.2em; padding-right:0.65em;">Type of format</th><td style="line-height:1.35em;">Data interchange</td></tr><tr><th scope="row" style="line-height:1.2em; padding-right:0.65em;"><span class="nowrap"><a href="/wiki/Open_format" title="Open format">Open format</a>?</span></th><td style="line-height:1.35em;">Yes</td></tr><tr><th scope="row" style="line-height:1.2em; padding-right:0.65em;">Website</th><td style="line-height:1.35em;"><span class="url"><a rel="nofollow" class="external text" href="https://yaml.org">yaml<wbr>.org</a></span></td></tr></tbody></table>
++:------------------------------------------------------------------------------------------------------------------------------------------------------------:+
+| [![YAML Logo.svg](//upload.wikimedia.org/wikipedia/commons/thumb/f/f8/YAML_Logo.svg/250px-YAML_Logo.svg.png){alt="YAML Logo.svg"}](/wiki/File:YAML_Logo.svg) |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| [Filename extensions](/wiki/Filename_extension "Filename extension")                                                                                         |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| [Internet media type](/wiki/Media_type "Media type")                                                                                                         |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Initial release                                                                                                                                              |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| [Latest release](/wiki/Software_release_life_cycle "Software release life cycle")                                                                            |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type of format                                                                                                                                               |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| [Open format](/wiki/Open_format "Open format")?                                                                                                              |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Website                                                                                                                                                      |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
----
+: YAML
+
+------------------------------------------------------------------------
 
 # Equations
 
-You can insert equations with the same syntax as in LaTeX. E.g. within a sentence `$ \sum (x + 1) $` $\sum (x + 1)$  or as standalone with double `$$` at start and finish
+You can insert equations with the same syntax as in LaTeX. E.g. within a sentence `$ \sum (x + 1) $` $\sum (x + 1)$ or as standalone with double `$$` at start and finish
 
 $$\int_{-\infty}^{\infty}1/(b-a) dx$$
 
@@ -147,9 +163,9 @@ $$\int_{-\infty}^{\infty}1/(b-a) dx$$
 
 The main thing, however, is the ability to integrate R (or other languages):
 
-> \```{r}  
-> cat("This is a code chunk")  
-> \```
+> \`\`\`{r}\
+> cat("This is a code chunk")\
+> \`\`\`
 
 ```{r}
 cat("This is a code chunk")
@@ -182,7 +198,7 @@ ggplot(py$flights, aes(carrier, arr_delay)) + geom_point() + geom_jitter()
 cat("Example from: https://rstudio.github.io/reticulate/articles/r_markdown.html")
 ```
 
-And a nice table alternative -> `kable` from the `knitr` package.
+And a nice table alternative -\> `kable` from the `knitr` package.
 
 ```{r}
 knitr::kable(head(mtcars[, 1:4]), caption = "A kable table, ver 1")
@@ -192,7 +208,7 @@ knitr::kable(head(mtcars[, 1:4]), caption = "A kable table, ver 1")
 knitr::kable(head(mtcars[, 1:4]), "html", caption = "A kable table, ver 2")
 ```
 
----
+------------------------------------------------------------------------
 
 # Code chunks customisation
 
@@ -203,7 +219,6 @@ knitr::kable(head(mtcars[, 1:4]), "html", caption = "A kable table, ver 2")
 ```{r chunk_name}
 "You just put the name after the language declaration"
 ```
-
 
 ## Using variables as parameters
 
@@ -247,31 +262,32 @@ Sys.sleep(10)
 a <- 4
 a
 ```
-The chunk gets reevaluated if anything changes within the chunk. **Make sure you know what you're doing when caching**. 
+
+The chunk gets reevaluated if anything changes within the chunk. **Make sure you know what you're doing when caching**.
 
 We can use `cache.extra =` to specify additional conditions for cache invalidation (i.e. to repeat the calculations), e.g.:
 
-- file.mtime('filename') # Modification time of the file changed
+-   file.mtime('filename') \# Modification time of the file changed
 
-- tools::md5sum('filename') # Content of the file changed
+-   tools::md5sum('filename') \# Content of the file changed
 
-- getRversion() # R version changed
+-   getRversion() \# R version changed
 
-- etc.
+-   etc.
 
 Other stuff:
 
-- `cache.comments` -- if you don't want to recalculate after changing a comment.
+-   `cache.comments` -- if you don't want to recalculate after changing a comment.
 
-- `cache.lazy` -- loading with lazyload() instead of load() (see [Lazy loading](https://en.wikipedia.org/wiki/Lazy_loading))
+-   `cache.lazy` -- loading with lazyload() instead of load() (see [Lazy loading](https://en.wikipedia.org/wiki/Lazy_loading))
 
-- `cache.path` -- to specify where to save cached stuff
+-   `cache.path` -- to specify where to save cached stuff
 
-- `cache.vars` -- cache specified objects
+-   `cache.vars` -- cache specified objects
 
-- `dependson` -- reevaluate conditional on a change in a different chunk (or chunks)
+-   `dependson` -- reevaluate conditional on a change in a different chunk (or chunks)
 
-- `autodep` -- `knitr` will try to find the between-chunk dependencies on its own
+-   `autodep` -- `knitr` will try to find the between-chunk dependencies on its own
 
 ## Keeping your report nice and clear
 
@@ -338,6 +354,7 @@ for (i in 1:10) {
 ### Cluster the results with `results='hold'`
 
 Standard:
+
 ```{r}
 x <- 5
 y <- 6
@@ -347,6 +364,7 @@ x * y
 ```
 
 With `results='hold'`:
+
 ```{r, results='hold'}
 x <- 5
 y <- 6
@@ -358,56 +376,57 @@ x * y
 ### Compress the output with `collapse=TRUE`
 
 Without
+
 ```{r}
 1 + 1
 1:10
 ```
 
 With
+
 ```{r, collapse=TRUE}
 1 + 1
 1:10
 ```
 
----
+------------------------------------------------------------------------
 
 # ASSIGNMENT 2 (for 30/31.03.2022)
 
-Pick a TV show that had its premieres on TV and thus has some viewership numbers reported on Wikipedia.
-E.g. [Suits](https://en.wikipedia.org/wiki/List_of_Suits_episodes) (see table just above the References)
+Pick a TV show that had its premieres on TV and thus has some viewership numbers reported on Wikipedia. E.g. [Suits](https://en.wikipedia.org/wiki/List_of_Suits_episodes) (see table just above the References)
 
 Then create a short report (you can copy the content from Wikipedia or other pages for this task) that contains, for example:
 
 (do a commit after each step!)
 
-1. A brief description of the show (use _italics_ for names).
-2. A photo with the logo or a shot from the show itself.
-3. A summary of some basic statistics (e.g. on viewership or ratings).
-4. A graph of the viewership over time.
-5. A graph of the episode-to-episode (or season-to-season) changes in viewership.
-6. A short description of the observed changes that includes inline references to numbers (e.g. the viewership decreased by `insert_calculated_number` between seasons 3 and 5).
-7. Make sure your report looks nice -> this time we're mostly interested in the output and not necessarily the codes used to achieve it.
-7. `knitr` your report and save it in the relevant folder (RR_Mar_30_31) of your repo. 
-8. Commit the changes and push them to Github.
+1.  A brief description of the show (use *italics* for names).
+2.  A photo with the logo or a shot from the show itself.
+3.  A summary of some basic statistics (e.g. on viewership or ratings).
+4.  A graph of the viewership over time.
+5.  A graph of the episode-to-episode (or season-to-season) changes in viewership.
+6.  A short description of the observed changes that includes inline references to numbers (e.g. the viewership decreased by `insert_calculated_number` between seasons 3 and 5).
+7.  Make sure your report looks nice -\> this time we're mostly interested in the output and not necessarily the codes used to achieve it.
+8.  `knitr` your report and save it in the relevant folder (RR_Mar_30_31) of your repo.
+9.  Commit the changes and push them to Github.
 
 ### Some other chunk options
 
 E.g.:
 
-- `highlight` -- syntax coloring
+-   `highlight` -- syntax coloring
 
-- `tidy`-- clean and format the code based on, e.g. `formatR` or `styler`, with specific options defined by `tidy.opts`
+-   `tidy`-- clean and format the code based on, e.g. `formatR` or `styler`, with specific options defined by `tidy.opts`
 
 For chunks with figures, e.g.:
 
-- `fig.align` -- alignment
+-   `fig.align` -- alignment
 
-- `fig.ext` -- image format
+-   `fig.ext` -- image format
 
-- `dev` -- graphical device for the plot generation
+-   `dev` -- graphical device for the plot generation
 
-- `dev.args`-- arguments to be passed to device (e.g. for image customisation)
+-   `dev.args`-- arguments to be passed to device (e.g. for image customisation)
 
-- `dpi` -- DPI
+-   `dpi` -- DPI
 
 You can, e.g., combine the above to produce images in DPI resolution and format appropriate for a publication.

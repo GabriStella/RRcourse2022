@@ -20,6 +20,11 @@ render("RMD_class_1_cut.Rmd", clean = FALSE)   # tells knitr to keep the interme
 
 # See https://www.rdocumentation.org/packages/rmarkdown/versions/2.6/topics/render for more
 
+render("RMD_class_1_cut.Rmd", list = year = 2017, 
+                                      regione = r,
+                                      file= "file2.csv" 
+       output_file= paste0("report_",y,"_",r,".html"))  
+
 
 #################
 
