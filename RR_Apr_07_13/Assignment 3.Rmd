@@ -18,6 +18,11 @@ params:
 
 #  **Game of Thrones** *(season `r params$season` )*
 
+```{r, echo= FALSE, include=FALSE}
+
+library(Rfast)
+```
+
 ```{r, echo= FALSE}
 x<- paste0("../Data/season_", params$season,".RData")
 
@@ -26,12 +31,6 @@ x<- paste0("../Data/season_", params$season,".RData")
 
 ```{r setup, include=FALSE}
 load(x)
-```
-
-
-```{r, echo= FALSE, include=FALSE}
-
-library(Rfast)
 ```
 
 
@@ -71,11 +70,13 @@ fourth_num <- season_data[season_data$viewers == fourth ,]$no_season
 
 
 
-Season `r params$season` of Game of Thrones consisted of `r max(season_data$no_season)` episodes. The show gathered an average of `r mean(season_data$viewers)` MLN first-day TV viewers in the US, with the number growing from `r season_data[season_data$no_season == min(season_data$no_season),]$viewers` to `r season_data[season_data$no_season == max(season_data$no_season),]$viewers` million by the end of the season.
+Season **`r params$season`** of Game of Thrones consisted of **`r paste0(first_num)`** episodes. The show gathered an average of **`r mean(season_data$viewers)`** MLN first-day TV viewers in the US, with the number growing from **`r season_data[season_data$no_season == min(season_data$no_season),]$viewers`** to **`r paste0(first)`** million by the end of the season.
 
-The most popular episode of the season was `r season_data[season_data$viewers == max(season_data$viewers),]$title` , in which:
+---
 
-`r season_data[season_data$viewers == max(season_data$viewers),]$description`
+The most popular episode of the season was **`r season_data[season_data$viewers == max(season_data$viewers),]$title`** , in which:
+
+*`r season_data[season_data$viewers == max(season_data$viewers),]$description`*
 
 ------------------------------------------------------------------------
 
@@ -86,7 +87,7 @@ plot(season_data$viewers, type="l", col="red", lwd=5, xlab = "Episode number", y
 ```
 
 --------
-
+Finally, the episodes with the above-average viewership were:
 
 |Episodes number |         title         |       directed by       |    viewership     |
 |:---------------:|:---------------------:|:-----------------------:|:-----------------:|
