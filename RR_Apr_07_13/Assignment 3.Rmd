@@ -12,18 +12,64 @@ params:
       max: 8
       step: 1
       sep: ""
+    printcode: TRUE 
+    data: .RData
 ---
 
+#  **Game of Thrones** *(season `r params$season` )*
 
 ```{r, echo= FALSE}
 x<- paste0("../Data/season_", params$season,".RData")
 
 ```
 
+
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
 load(x)
 ```
+
+
+```{r, echo= FALSE, include=FALSE}
+
+library(Rfast)
+```
+
+
+```{r, echo= FALSE}
+first <- Rfast::nth(season_data$viewers, 1, descending = T)
+
+second <- Rfast::nth(season_data$viewers, 2, descending = T)
+
+third <- Rfast::nth(season_data$viewers, 3, descending = T)
+
+fourth <- Rfast::nth(season_data$viewers, 4, descending = T)
+
+first_tit <- season_data[season_data$viewers == first ,]$title
+
+first_dirby <- season_data[season_data$viewers == first ,]$directed_by
+
+first_num <- season_data[season_data$viewers == first ,]$no_season
+
+second_tit <- season_data[season_data$viewers == second ,]$title
+
+second_dirby <- season_data[season_data$viewers == second ,]$directed_by
+
+second_num <- season_data[season_data$viewers == second ,]$no_season
+
+third_tit <- season_data[season_data$viewers == third ,]$title
+
+third_dirby <- season_data[season_data$viewers == third ,]$directed_by
+
+third_num <- season_data[season_data$viewers == third ,]$no_season
+
+fourth_tit <- season_data[season_data$viewers == fourth ,]$title
+
+fourth_dirby <- season_data[season_data$viewers == fourth ,]$directed_by
+
+fourth_num <- season_data[season_data$viewers == fourth ,]$no_season
+```
+
+
 
 Season `r params$season` of Game of Thrones consisted of `r max(season_data$no_season)` episodes. The show gathered an average of `r mean(season_data$viewers)` MLN first-day TV viewers in the US, with the number growing from `r season_data[season_data$no_season == min(season_data$no_season),]$viewers` to `r season_data[season_data$no_season == max(season_data$no_season),]$viewers` million by the end of the season.
 
@@ -35,10 +81,16 @@ The most popular episode of the season was `r season_data[season_data$viewers ==
 
 You can see how the viewership of the episodes changed in Figure 1.
 
-```{r viewers_plot}
+```{r viewers_plot, echo= FALSE}
 plot(season_data$viewers, type="l", col="red", lwd=5, xlab = "Episode number", ylab = "1st day TV viewers in the US (millions)")
 ```
 
+--------
 
 
-
+|Episodes number |         title         |       directed by       |    viewership     |
+|:---------------:|:---------------------:|:-----------------------:|:-----------------:|
+|`r paste(first_num)` | `r paste(first_tit)`  | `r paste(first_dirby)`  | `r paste(first)`  |
+|`r paste(second_num)` | `r paste(second_tit)` | `r paste(second_dirby)` | `r paste(second)` |
+|`r paste(third_num)`| `r paste(third_tit)`  | `r paste(third_dirby)`  | `r paste(third)`  |
+|`r paste(fourth_num)` | `r paste(fourth_tit)` | `r paste(fourth_dirby)` | `r paste(fourth)` |
