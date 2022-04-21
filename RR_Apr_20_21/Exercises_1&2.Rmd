@@ -1,0 +1,72 @@
+---
+title: Exercises 1 and 2 - *(clean code)*
+author: Gabriele Stella
+date: 21/04/2022
+output: html_document
+---
+
+## exercise 1:
+
+-   ***Consider a FizzBuzz problem. The program should write numbers from 1 to 100, separated by a newline, but multiples of 3 and of 5 should be replaced with "Fizz" and "Buzz" respectively. For numbers which are multiples of both 3 and 5 print "FizzBuzz". Here are some solutions, which are not readable:***
+
+```{python}
+
+ 
+
+  
+for i in range (1,100):
+  if (i % 15) == 0:           #if both FizzBuzz 
+    print ("FizzBuzz")
+  elif (i % 3) == 0:          # if i is a multiple of 3 type Fizz  
+    print ("Fizz")           
+  elif (i % 5) == 0:          #if i is a multiple of 5 type Buzz
+    print("Buzz")            
+  else: 
+    print(i)                  #else number 
+  
+```
+
+## exercise 2
+
+a.  ***Write a function which takes n (float or integer) as a parameter and returns the largest Fibonacci number smaller than n. The function should be documented, with type hints, and appropriate comments.***
+
+```{python}
+
+def fibonacci (n): 
+  if n==0 or n==1:
+    result = 1
+  else: 
+    result= fibonacci(n-1) + fibonacci (n-2)
+  return result 
+
+
+
+def fibonacci_bigger_smaller (n,i=1):
+  if n == 0 or n == 1:
+    return print("doesn't exist a fibonacci number smaller than", n) 
+  elif fibonacci(i) >= n :  #if this one is bigger, the previous one was smaller
+    return fibonacci (i-1)
+  while True:        #this function allows us to check every fobinacci number from 1 to n
+    fibonacci(i) < n 
+    return fibonacci_bigger_smaller (n,i=i+1) 
+    
+print(fibonacci_bigger_smaller(90))
+```
+
+
+b. ***Write a function which reverses digits in an integer number (for example 7245 -> 5427). The function should be documented, with type hints, and appropriate comments.***
+
+```{python}
+ 
+def rev(n,reverse=0):
+  while (n>0):                #while there are number 
+    N_D = n % 10              #it means take the last number (New Digits)
+    reverse= reverse*10 + N_D #ad add in the reverse number (set to zero at the biginning)
+    n= n//10                  #remove the last digits of the number
+  return (reverse)
+
+
+rev(7245)
+    
+```
+
