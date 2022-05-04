@@ -1,0 +1,26 @@
+```{python}
+
+import us #we're importing the necessary library
+import pandas as pd
+
+c = us.states.STATES  #we're saving as c a list of states
+
+print (c)
+
+print([x.name for x in c]) #list became string
+
+states_lowercase= [x.name for x in c]
+states.to_csv('states_lowercase.csv', sep= ',')
+
+for i in range(len(states_lowercase)):
+
+  states_lowercase[i] = states_lowercase[i].upper() #our list became uppercase
+
+first = pd.DataFrame([states_lowercase]) 
+states = first.transpose() #actually there are another simple way, without transpose, but i can't now
+states.to_csv('states_uppercase.csv', sep= ',')
+
+```
+
+
+
