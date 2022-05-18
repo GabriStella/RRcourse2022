@@ -1,0 +1,31 @@
+Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.13.0-1024-gcp x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Wed May 18 08:02:55 UTC 2022
+
+  System load:  0.0               Processes:             105
+  Usage of /:   18.2% of 9.52GB   Users logged in:       0
+  Memory usage: 20%               IPv4 address for ens4: 10.182.0.2
+  Swap usage:   0%
+
+
+1 update can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+Last login: Wed May  4 09:16:48 2022 from 35.235.242.208
+gabrielestella302@instance-1:~$ uname -a
+Linux instance-1 5.13.0-1024-gcp #29~20.04.1-Ubuntu SMP Thu Apr 14 23:15:00 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+gabrielestella302@instance-1:~$ touch test.txt
+gabrielestella302@instance-1:~$ ls -k
+test.txt
+gabrielestella302@instance-1:~$ ls -l
+total 0
+-rw-rw-r-- 1 gabrielestella302 gabrielestella302 0 May 18 08:03 test.txt
+gabrielestella302@instance-1:~$ 
